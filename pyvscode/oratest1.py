@@ -1,13 +1,13 @@
 #coding=utf-8
 import cx_Oracle
 
-conn= cx_Oracle.connect('mymotif/wxwpxh@winorcl')
+conn= cx_Oracle.connect('mymotif/wxwpxh@orcl')
 cur = conn.cursor() 			
 cur.execute("select * from STUDENT")
 info = cur.fetchall() 
-print len(info)   	#获得表中有多少条数据
+print len(info)   	#鑾峰緱琛ㄤ腑鏈夊灏戞潯鏁版嵁
 for ii in info:
-    print ii[0]+' '+ii[1]+' '+ii[2]+' '+ii[3].strftime('%Y-%m-%d')+' '+ii[4]	
+    print(ii[0]+' '+ii[1]+' '+ii[2]+' '+ii[3].strftime('%Y-%m-%d')+' '+ii[4])	
 cur.close()
 conn.commit()
 conn.close()
