@@ -8,3 +8,4 @@ for num in range(10,20):  # 迭代 10 到 20 之间的数字
          break            # 跳出当前循环
    else:                  # 循环的 else 部分
       print(num, '是一个质数') 
+
